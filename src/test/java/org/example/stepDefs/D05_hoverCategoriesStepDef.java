@@ -17,7 +17,7 @@ public class D05_hoverCategoriesStepDef {
     P03_homePage homePage = new P03_homePage();
     Actions action = new Actions(Hooks.driver);
 
-    @When("hover on one of the categories.")
+    @When("hover on one of the categories and choose sub-category.")
     public void hoverOnMenu() {
         homePage.hover(); //locate and save the elements
         int size = homePage.hover().size()-4;
