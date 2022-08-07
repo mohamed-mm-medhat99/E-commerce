@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="205.315">
+<testcase classname="F01_Register | users could register with new accounts" name="user could register with valid data successfully" time="10.982">
+<system-out><![CDATA[Given user go to register page..............................................passed
+And user select gender type and enter first name "automation" and last name "tester".passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field and password fields "P@ssw0rd" "P@ssw0rd".passed
+Then user clicks on register button.........................................passed
+And success message is displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="9.231">
+<system-out><![CDATA[When user go to login page..................................................passed
+Then user login with valid "test0@example.com" and "P@ssw0rd"...............passed
+And user press on login button..............................................passed
+And user login to the system successfully...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="9.917">
+<system-out><![CDATA[When user go to login page..................................................passed
+Then user login with invalid "wrong@example.com" and "P@ssw0rd".............passed
+And user click on login button..............................................passed
+And user could not login to the system......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_currencies | user should be able to change the currency." name="deal with the dropdown menu elements." time="13.202">
+<system-out><![CDATA[And Select Euro currency from the dropdown list on the top left of home page.passed
+And verify that Euro Symbol (€) is shown on the 4 products displayed in Home page.passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different key words" time="7.443">
+<system-out><![CDATA[When writes the search word "book"..........................................passed
+And click on the search button..............................................passed
+Then the url should be changed..............................................passed
+And search show relevant results "book".....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different key words 2" time="7.716">
+<system-out><![CDATA[When writes the search word "laptop"........................................passed
+And click on the search button..............................................passed
+Then the url should be changed..............................................passed
+And search show relevant results "laptop"...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different key words 3" time="7.506">
+<system-out><![CDATA[When writes the search word "nike"..........................................passed
+And click on the search button..............................................passed
+Then the url should be changed..............................................passed
+And search show relevant results "nike".....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different sku" time="11.438">
+<system-out><![CDATA[When write the search sku "SCI_FAITH".......................................passed
+And click on the search button..............................................passed
+And navigate to the product details screen..................................passed
+Then check that the search number equals the number appears on the page "SCI_FAITH".passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different sku 2" time="11.297">
+<system-out><![CDATA[When write the search sku "APPLE_CAM".......................................passed
+And click on the search button..............................................passed
+And navigate to the product details screen..................................passed
+Then check that the search number equals the number appears on the page "APPLE_CAM".passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_search | user could search using product name or sku name" name="search with different sku 3" time="10.163">
+<system-out><![CDATA[When write the search sku "SF_PRO_11".......................................passed
+And click on the search button..............................................passed
+And navigate to the product details screen..................................passed
+Then check that the search number equals the number appears on the page "SF_PRO_11".passed
+]]></system-out>
+</testcase>
+<testcase classname="F05_hover | hover on one of the categories and click on one of the sub-categories." name="Hover, select and get the text of a sub-category" time="7.988">
+<system-out><![CDATA[When hover on one of the categories.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06 | click on home slider." name="Verify that the home slider first image navigates to the correct page." time="12.469">
+<failure message="Not The Same Link expected same:&lt;https://demo.nopcommerce.com/nokia-lumia-1020&gt; was not:&lt;https://demo.nopcommerce.com/&gt;" type="java.lang.AssertionError"><![CDATA[Given click on the home slider first image and verify the link..............failed
+
+StackTrace:
+java.lang.AssertionError: Not The Same Link expected same:<https://demo.nopcommerce.com/nokia-lumia-1020> was not:<https://demo.nopcommerce.com/>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotSame(Assert.java:828)
+	at org.junit.Assert.assertSame(Assert.java:771)
+	at org.example.stepDefs.D06_homeSlidersStepDef.ClickOnTheSliderAndAssertTheUrl(D06_homeSlidersStepDef.java:19)
+	at ✽.click on the home slider first image and verify the link(file:///C:/Users/yogy7/IdeaProjects/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:4)
+]]></failure>
+</testcase>
+<testcase classname="F06 | click on home slider." name="Verify that the home slider second image navigates to the correct page." time="14.75">
+<failure message="Not The Same Link expected same:&lt;https://demo.nopcommerce.com/iphone-6&gt; was not:&lt;https://demo.nopcommerce.com/&gt;" type="java.lang.AssertionError"><![CDATA[Given click on the home slider second image and verify the link.............failed
+
+StackTrace:
+java.lang.AssertionError: Not The Same Link expected same:<https://demo.nopcommerce.com/iphone-6> was not:<https://demo.nopcommerce.com/>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotSame(Assert.java:828)
+	at org.junit.Assert.assertSame(Assert.java:771)
+	at org.example.stepDefs.D06_homeSlidersStepDef.secondImage(D06_homeSlidersStepDef.java:31)
+	at ✽.click on the home slider second image and verify the link(file:///C:/Users/yogy7/IdeaProjects/demonopcommerce/src/main/resources/features/F06_homeSliders.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user press facebook link" time="11.018">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user open twitter link" time="10.495">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in a new tab...............passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user open rss link" time="11.789">
+<failure message="expected:&lt;https://[demo.nopcommerce.com/new-online-store-is-open]&gt; but was:&lt;https://[www.facebook.com/nopCommerce]&gt;" type="org.junit.ComparisonFailure"><![CDATA[When user opens rss link....................................................passed
+And "https://demo.nopcommerce.com/new-online-store-is-open" is opened.......failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<https://[demo.nopcommerce.com/new-online-store-is-open]> but was:<https://[www.facebook.com/nopCommerce]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.example.pages.P03_homePage.openTheNewTab(P03_homePage.java:51)
+	at org.example.stepDefs.D07_followUsStepDef.assertRssLink(D07_followUsStepDef.java:56)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" is opened(file:///C:/Users/yogy7/IdeaProjects/demonopcommerce/src/main/resources/features/F07_followUs.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUs | users could open followUs links" name="user open youtube link" time="12.3">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened successfully......passed
+]]></system-out>
+</testcase>
+<testcase classname="F08 | wishlist message" name="check that wishlist message is displayed." time="7.556">
+<system-out><![CDATA[Given press on the wishlist button..........................................passed
+Then the wishlist message appears and its colo is green.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08 | wishlist message" name="open the wishlist page and get the quantity value." time="17.493">
+<system-out><![CDATA[Given press the wishlist button.............................................passed
+And open wishlist screen and check the quantity.............................passed
+]]></system-out>
+</testcase>
+</testsuite>
